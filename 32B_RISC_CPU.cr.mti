@@ -1,0 +1,142 @@
+F:/32B_RISC_CPU/flip_flop_6.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/flip_flop_6.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module flip_flop_6
+
+Top level modules:
+	flip_flop_6
+
+} {} {}} F:/32B_RISC_CPU/parameter.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/parameter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} F:/32B_RISC_CPU/fp_adder_tb.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/fp_adder_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fp_adder_tb
+
+Top level modules:
+	fp_adder_tb
+
+} {} {}} F:/32B_RISC_CPU/alu.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/alu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fp_adder
+-- Compiling module fp_multiplier
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} F:/32B_RISC_CPU/data_memory.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/data_memory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module data_memory
+
+Top level modules:
+	data_memory
+
+} {} {}} F:/32B_RISC_CPU/flip_flop.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/flip_flop.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module flip_flop
+
+Top level modules:
+	flip_flop
+
+} {} {}} F:/32B_RISC_CPU/floating_point_adder.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/floating_point_adder.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fp_adder
+
+Top level modules:
+	fp_adder
+
+} {} {}} F:/32B_RISC_CPU/register_file.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/register_file.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} F:/32B_RISC_CPU/datapath.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/datapath.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Datapath_Unit
+
+Top level modules:
+	Datapath_Unit
+
+} {} {}} F:/32B_RISC_CPU/flip_flop_32.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/flip_flop_32.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module flip_flop_32
+
+Top level modules:
+	flip_flop_32
+
+} {} {}} F:/32B_RISC_CPU/cpu.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/cpu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module risc_32_bit
+
+Top level modules:
+	risc_32_bit
+
+} {} {}} F:/32B_RISC_CPU/fp_multiplier_tb.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/fp_multiplier_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fp_multiplier_tb
+
+Top level modules:
+	fp_multiplier_tb
+
+} {} {}} F:/32B_RISC_CPU/instruction_memory.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/instruction_memory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} F:/32B_RISC_CPU/floating_point_multiplier.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/floating_point_multiplier.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fp_multiplier
+
+Top level modules:
+	fp_multiplier
+
+} {} {}} F:/32B_RISC_CPU/flip_flop_2.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/flip_flop_2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module flip_flop_2
+
+Top level modules:
+	flip_flop_2
+
+} {} {}} F:/32B_RISC_CPU/opcodes.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/opcodes.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} F:/32B_RISC_CPU/cpu_tb.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/cpu_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module test_32_bit_risc
+
+Top level modules:
+	test_32_bit_risc
+
+} {} {}} F:/32B_RISC_CPU/shifter.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/shifter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} F:/32B_RISC_CPU/controlpath.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/controlpath.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
+} {} {}} F:/32B_RISC_CPU/instruction_register.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/instruction_register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module instruction_register
+
+Top level modules:
+	instruction_register
+
+} {} {}} F:/32B_RISC_CPU/flip_flop_5.v {1 {vlog -work work -stats=none F:/32B_RISC_CPU/flip_flop_5.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module flip_flop_5
+
+Top level modules:
+	flip_flop_5
+
+} {} {}}

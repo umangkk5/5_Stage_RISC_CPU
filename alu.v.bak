@@ -1,0 +1,96 @@
+`include "opcodes.v"
+
+module ALU(a, b, function_select, result);
+
+input[31:0] a;
+input[31:0] b;
+input[2:0] function_select;
+output[31:0] result;
+
+reg[32:0] internal_result;
+wire overflow, underflow;
+
+assign result = internal_result[31:0];
+assign c = internal_result[32];
+assign n = internal_result[31];
+assign z = (result == 0)? 1'b1 : 1'b0;
+
+assign overflow = (internal_result[32:31] == 2'b01 ? 1'b1 : 1'b0);
+assign underflow = (internal_result[32:31] == 2'b10 ? 1'b1 : 1'b0);
+
+assign v = overflow | underflow;
+
+always @(*)
+begin
+	internal_result = 0;
+	case(function_select)
+	
+	`NOP_ALU: begin
+			  // No operation
+			  internal_result = {a[31], a};
+			  end
+			  
+	`ADD_ALU: begin
+			  // Signed addition
+			  internal_result = {a[31],a} + {b[31],b};
+			  end
+			  
+	`SUB_ALU: begin
+			  // Signed subtraction
+			  internal_result = {a[31],a} + ~{b[31],b} + 1'b1;
+			  end
+			  
+	`AND_ALU: begin
+			  // logical AND
+			  internal_result = a & b;
+			  end
+			 
+	`OR_ALU:  begin
+			  // logical OR
+			  internal_result = a | b;
+			  end
+			  
+	`NOT_ALU: begin
+			  // logical inverter
+			  internal_result = ~a;
+			  end
+			  
+	`XOR_ALU: begin
+			  // logical XOR
+			  internal_result = a ^ b;
+			  end
+			  
+	`SGE_ALU: begin
+		      // Set if greater than or equal to
+			  internal_result = (a >= b)? 32'd1 : 32'd0;
+			  end
+			  
+	`SGT_ALU: begin
+			  // Set if greater than
+			  internal_result = (a > b)? 32'd1 : 32'd0;
+			  end
+			  
+	`SLE_ALU: begin
+			  // Set if less than or equal to
+			  internal_result = (a <= b)? 32'd1 : 32'd0;
+			  end
+			  
+	`SLT_ALU: begin
+			  // Set if less than
+			  internal_result = (a < b)? 32'd1 : 32'd0;
+			  
+	`SEQ_ALU: begin
+			  // Set if equal
+			  internal_result = (a == b)? 32'd1 : 32'd0;
+			  end
+			  
+	`SNE_ALU: begin
+			  // Set if not equal
+			  internal_result = (a == b)? 32'b0 : 32'b1;
+			  end			  
+			  
+	default: internal_result = internal_result;
+ endcase
+end
+
+endmodule

@@ -1,0 +1,477 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+vALU
+Z0 !s110 1511645153
+!i10b 1
+!s100 g>3kjMGa_^D?jX:8C?2e^1
+IWJO^ea4SY`65TQLV4=36k2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dF:/32B_RISC_CPU
+w1511645429
+8F:/32B_RISC_CPU/alu.v
+FF:/32B_RISC_CPU/alu.v
+L0 5
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1511645153.000000
+!s107 floating_point_multiplier.v|floating_point_adder.v|opcodes.v|F:/32B_RISC_CPU/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/alu.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@l@u
+vControl_Unit
+Z6 !s110 1511645154
+!i10b 1
+!s100 fm<[9BkRhPofzQU0jbIU;2
+IN:YI0PUl7^3FdH@a4bc_A0
+R1
+R2
+w1511645903
+8F:/32B_RISC_CPU/controlpath.v
+FF:/32B_RISC_CPU/controlpath.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z7 !s108 1511645154.000000
+!s107 opcodes.v|F:/32B_RISC_CPU/controlpath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/controlpath.v|
+!s101 -O0
+!i113 1
+R5
+n@control_@unit
+vdata_memory
+R0
+!i10b 1
+!s100 785:UZWS=INzKmOQYedSY2
+IMMm@[b@j`gJDznX0mVHU]2
+R1
+R2
+w1511137068
+8F:/32B_RISC_CPU/data_memory.v
+FF:/32B_RISC_CPU/data_memory.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 parameter.v|F:/32B_RISC_CPU/data_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/data_memory.v|
+!s101 -O0
+!i113 1
+R5
+vDatapath_Unit
+R6
+!i10b 1
+!s100 b<b0KVlEaHGbJKOVk8Cfk3
+I[agh;R74bWo:HKJkLB8>01
+R1
+R2
+w1511645139
+8F:/32B_RISC_CPU/datapath.v
+FF:/32B_RISC_CPU/datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/32B_RISC_CPU/datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/datapath.v|
+!s101 -O0
+!i113 1
+R5
+n@datapath_@unit
+vflip_flop
+Z8 !s110 1511645156
+!i10b 1
+!s100 WK][;B3T3ac_bzMFkCokL0
+I`BMJoeJ5K>`Z8VD0Z27X:3
+R1
+R2
+w1511139396
+8F:/32B_RISC_CPU/flip_flop.v
+FF:/32B_RISC_CPU/flip_flop.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z9 !s108 1511645156.000000
+!s107 F:/32B_RISC_CPU/flip_flop.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/flip_flop.v|
+!s101 -O0
+!i113 1
+R5
+vflip_flop_2
+R8
+!i10b 1
+!s100 D3L4>:icl=1hFi<znOQF_3
+IB4iQJgZLYjj]mZ9a69ml`2
+R1
+R2
+w1511139223
+8F:/32B_RISC_CPU/flip_flop_2.v
+FF:/32B_RISC_CPU/flip_flop_2.v
+L0 3
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/32B_RISC_CPU/flip_flop_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/flip_flop_2.v|
+!s101 -O0
+!i113 1
+R5
+vflip_flop_32
+Z10 !s110 1511645155
+!i10b 1
+!s100 i_=TAG>:M:`zFIg>@CK530
+IfeI]]h7S2AS9gl;Hk_0[:0
+R1
+R2
+w1511140149
+8F:/32B_RISC_CPU/flip_flop_32.v
+FF:/32B_RISC_CPU/flip_flop_32.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z11 !s108 1511645155.000000
+!s107 F:/32B_RISC_CPU/flip_flop_32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/flip_flop_32.v|
+!s101 -O0
+!i113 1
+R5
+vflip_flop_5
+R10
+!i10b 1
+!s100 W4h>41`V]G>z5@CWLOziI0
+I@?b02fHW=IX1X28_oIJ3j3
+R1
+R2
+w1511140204
+8F:/32B_RISC_CPU/flip_flop_5.v
+FF:/32B_RISC_CPU/flip_flop_5.v
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/32B_RISC_CPU/flip_flop_5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/flip_flop_5.v|
+!s101 -O0
+!i113 1
+R5
+vflip_flop_6
+R8
+!i10b 1
+!s100 3UQ?WFZNU>94SV1NUm7o^2
+IAomE8RTb?jEN3YA@z3PCZ1
+R1
+R2
+w1511138018
+8F:/32B_RISC_CPU/flip_flop_6.v
+FF:/32B_RISC_CPU/flip_flop_6.v
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/32B_RISC_CPU/flip_flop_6.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/flip_flop_6.v|
+!s101 -O0
+!i113 1
+R5
+vfp_adder
+R8
+!i10b 1
+!s100 KboaQZGP_34jHA;3aN1JZ3
+ITYRPAHXCe_R:SC]EPQNMU1
+R1
+R2
+w1511645281
+8F:/32B_RISC_CPU/floating_point_adder.v
+FF:/32B_RISC_CPU/floating_point_adder.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/32B_RISC_CPU/floating_point_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/floating_point_adder.v|
+!s101 -O0
+!i113 1
+R5
+vfp_adder_tb
+Z12 !s110 1511645157
+!i10b 1
+!s100 fh^<L3RbjBN4I]Q<7fLo23
+IlcYQ@;ibDc0l;XRHLIl[Y1
+R1
+R2
+w1511645269
+8F:/32B_RISC_CPU/fp_adder_tb.v
+FF:/32B_RISC_CPU/fp_adder_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/32B_RISC_CPU/fp_adder_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/fp_adder_tb.v|
+!s101 -O0
+!i113 1
+R5
+vfp_multiplier
+R12
+!i10b 1
+!s100 ;V_I8NDe4dRjjiaDb5L1_2
+IUCh;JADNGPOhMM4ijMOQQ1
+R1
+R2
+w1511646095
+8F:/32B_RISC_CPU/floating_point_multiplier.v
+FF:/32B_RISC_CPU/floating_point_multiplier.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z13 !s108 1511645157.000000
+!s107 F:/32B_RISC_CPU/floating_point_multiplier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/floating_point_multiplier.v|
+!s101 -O0
+!i113 1
+R5
+vfp_multiplier_tb
+R12
+!i10b 1
+!s100 O3QmXFa9FWmA0MV@oX;H@1
+IVaTfgOh_b@F[RHL8OId2h1
+R1
+R2
+w1511645396
+8F:/32B_RISC_CPU/fp_multiplier_tb.v
+FF:/32B_RISC_CPU/fp_multiplier_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R13
+!s107 F:/32B_RISC_CPU/fp_multiplier_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/fp_multiplier_tb.v|
+!s101 -O0
+!i113 1
+R5
+vinstruction_memory
+R0
+!i10b 1
+!s100 c;0zbblSLz;7m6]RlA_AU0
+IJPEGCPL87<0H<z4V?RhBV1
+R1
+R2
+w1510711178
+Z14 8F:/32B_RISC_CPU/instruction_memory.v
+Z15 FF:/32B_RISC_CPU/instruction_memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/32B_RISC_CPU/instruction_memory.v|
+Z16 !s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/instruction_memory.v|
+!s101 -O0
+!i113 1
+R5
+vInstruction_memory
+!s110 1510207694
+!i10b 1
+!s100 iIB=YHmCD4[gISA<YFg6c2
+I;YI<;jPzMJlhzZB7851cG3
+R1
+R2
+w1510207689
+R14
+R15
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1510207694.000000
+!s107 parameter.v|F:/32B_RISC_CPU/instruction_memory.v|
+R16
+!s101 -O0
+!i113 1
+R5
+n@instruction_memory
+vinstruction_register
+R0
+!i10b 1
+!s100 iQ[<]>9SLC9X147T]NmDo0
+I>WP`<VlaO]hg@JTeoQ?`11
+R1
+R2
+w1511647410
+Z17 8F:/32B_RISC_CPU/instruction_register.v
+Z18 FF:/32B_RISC_CPU/instruction_register.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+Z19 !s107 parameter.v|F:/32B_RISC_CPU/instruction_register.v|
+Z20 !s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/instruction_register.v|
+!s101 -O0
+!i113 1
+R5
+vInstruction_register
+!s110 1510261466
+!i10b 1
+!s100 cXmKf>1?TfFoDW_P=D26^3
+I`kfZFTLXI?j]aN2P^jkXH0
+R1
+R2
+w1510209035
+R17
+R18
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1510261466.000000
+R19
+R20
+!s101 -O0
+!i113 1
+R5
+n@instruction_register
+vprogram_counter
+!s110 1510287784
+!i10b 1
+!s100 N`j1:RagbPVOY>_;O@ndL3
+Ii?QnIcFAGUDeV_4VW5>Wl2
+R1
+R2
+w1510287766
+8F:/32B_RISC_CPU/program_counter.v
+FF:/32B_RISC_CPU/program_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1510287784.000000
+!s107 F:/32B_RISC_CPU/program_counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/program_counter.v|
+!s101 -O0
+!i113 1
+R5
+vregister_file
+R0
+!i10b 1
+!s100 Y_K@QDkgGeffmVYmzX8zk2
+IW[[055c3nn2?^LQi6Pk;e2
+R1
+R2
+w1511137910
+8F:/32B_RISC_CPU/register_file.v
+FF:/32B_RISC_CPU/register_file.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/32B_RISC_CPU/register_file.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/register_file.v|
+!s101 -O0
+!i113 1
+R5
+vrisc_32_bit
+R10
+!i10b 1
+!s100 1ZNDTLKdOfVe<OK`k@T7M0
+I7Wbfd6JQ8HlXQCa;ozMlK2
+R1
+R2
+w1511138788
+8F:/32B_RISC_CPU/cpu.v
+FF:/32B_RISC_CPU/cpu.v
+L0 2
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/32B_RISC_CPU/cpu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/cpu.v|
+!s101 -O0
+!i113 1
+R5
+vshifter
+R6
+!i10b 1
+!s100 >8VHQU^edFUHbhLAg1[E;0
+IcjPE9Y0M90c`;KajRedn=0
+R1
+R2
+w1510285080
+8F:/32B_RISC_CPU/shifter.v
+FF:/32B_RISC_CPU/shifter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/32B_RISC_CPU/shifter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/shifter.v|
+!s101 -O0
+!i113 1
+R5
+vtest_32_bit_risc
+R10
+!i10b 1
+!s100 YBRQV1c@KJihg50F2mF6X3
+In8;_S`bMQF;dn[e;P49XR2
+R1
+R2
+w1510710974
+8F:/32B_RISC_CPU/cpu_tb.v
+FF:/32B_RISC_CPU/cpu_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R11
+!s107 parameter.v|F:/32B_RISC_CPU/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/32B_RISC_CPU/cpu_tb.v|
+!s101 -O0
+!i113 1
+R5

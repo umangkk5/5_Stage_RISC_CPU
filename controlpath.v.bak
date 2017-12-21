@@ -1,0 +1,150 @@
+`include "opcodes.v"
+
+module Control_Unit(
+ input[5:0] opcode,
+ output reg DM_write,RF_dest_addr, mem_to_reg, RF_write, sli_sri,
+ output reg[1:0] jump_or_branch
+);
+
+initial begin
+RF_dest_addr = 1'b0;
+mem_to_reg = 1'b0;
+RF_write = 1'b0;
+DM_write = 1'b0;
+jump_or_branch = 0;  
+sli_sri = 0;
+end
+
+always @(*)
+begin
+	case(opcode)
+	`NOP_ALU:   begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b0;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+			
+	`ADD_ALU:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;	
+				end
+	`SUB_ALU:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;	
+				end
+	`AND_ALU:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+	
+	`OR_ALU	:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+	
+	`XOR_ALU:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+				
+	`NOT_ALU:
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+	
+	
+	`LOAD_ALU :	
+				begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b1;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+								
+	`STORE_ALU :
+				begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b0;
+				DM_write = 1'b1;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+				
+	`SLI_ALU :	
+				begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 1;
+				end
+				
+	`SRI_ALU :	
+				begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 1;
+				end
+				
+	
+	`MOVE_ALU :	
+				begin
+				RF_dest_addr = 1'b1;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b1;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				sli_sri = 0;
+				end
+				
+	default: 	begin
+				RF_dest_addr = 1'b0;
+				mem_to_reg = 1'b0;
+				RF_write = 1'b0;
+				DM_write = 1'b0;
+				jump_or_branch = 0;
+				end
+	endcase
+end
+
+endmodule
