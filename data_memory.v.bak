@@ -1,0 +1,19 @@
+`include "parameter.v"
+
+module data_memory(DOut, AIn, DIn, WE );
+
+input[`MEMORY_SIZE-1:0] AIn;
+input[`MEMORY_SIZE-1:0] DIn;
+input WE;
+output reg[`MEMORY_SIZE-1:0] DOut;
+
+reg[`MEMORY_SIZE-1:0] data_memory[`DM_LENGTH-1:0];
+
+always @(WE)
+begin
+	if(WE == 0)
+	DOut = data_memory[AIn];
+	else
+	data_memory[AIn] = DIn;
+end
+endmodule

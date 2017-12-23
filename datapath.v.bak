@@ -1,0 +1,74 @@
+module Datapath_Unit(
+ input clk,
+ input DM_write,RF_dest_addr, mem_to_reg, RF_write, sli_sri,
+ input[1:0] jump_or_branch, 
+ output[5:0] opcode
+);
+
+// First stage: Program counter
+
+reg[31:0] pc_current;
+wire[31:0] pc_next,pc2;
+
+initial begin
+	pc_current <= 32'd0;
+end
+
+always @(posedge clk)
+begin
+	pc_current <= pc_next;
+end
+assign pc2 = pc_current + 32'd1;
+
+// Instruction memory Stage
+wire[31:0] instr;
+instruction_memory IM(.DOut(instr), .AIn(pc_current));
+
+wire[4:0] IF_RS1_RS;
+wire[4:0] IF_RS2_RD;
+wire[4:0] IF_RD;
+wire[25:0] IF_IMM_J;
+wire[15:0] IF_IMM_BA;
+
+instruction_register IR(.OPC(opcode), .RS1_RS(IF_RS1_RS), .RS2_RD(IF_RS2_RD),
+				     .RD(IF_RD), .IMM_J(IF_IMM_J), .IMM_BA(IF_IMM_BA), .value(instr), .clk(clk));
+					
+
+// Register file Stage
+
+wire[31:0] RF_DOut1;
+wire[31:0] RF_DOut2;
+wire[31:0] RF_write_data;
+wire[4:0]  RF_write_addr;
+ 
+assign RF_write_addr = (mem_to_reg || sli_sri)? IF_RS2_RD : IF_RD ;
+
+register_file RF(.DOut1(RF_DOut1), .DOut2(RF_DOut2), .AIn1(IF_RS1_RS), .AIn2(IF_RS2_RD), .AIn3(RF_write_addr), .DIn(RF_write_data), .WE(RF_write), .clk(clk));
+
+wire[31:0] ALU_in_RF_DOut1l
+
+flip_flop_32(.Q(), .D(), .clk(clk));
+// ALU Stage
+
+wire[31:0] ALU_in1;
+wire[31:0] ALU_in2;
+
+assign ALU_in1 = (mem_to_reg || RF_dest_addr || sli_sri)? RF_DOut1 : RF_DOut2;
+assign ALU_in2 = (mem_to_reg || DM_write || sli_sri)? {{16{IF_IMM_BA[15]}}, IF_IMM_BA} : RF_DOut2;
+
+wire[31:0] AS_out;
+
+ALU AS(.a(ALU_in1), .b(ALU_in2), .function_select(opcode), .result(AS_out));
+
+assign pc_next = (jump_or_branch == 2'b00)? pc2 : (jump_or_branch == 2'b01)? {{16{1'b0}}, IF_IMM_BA} : {{6{1'b0}},IF_IMM_J};
+
+// Data memory Stage
+wire[31:0] DM_Out;
+
+data_memory DM(.DOut(DM_Out), .AIn(AS_out), .DIn(RF_DOut1), .WE(DM_write));
+
+// Write back stage
+
+assign RF_write_data = (mem_to_reg == 1'b1)? DM_Out : AS_out;
+
+endmodule
